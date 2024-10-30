@@ -1,0 +1,90 @@
+#server:
+#  port: 8003
+#
+#spring:
+#  #配置服务名及nacos
+#  application:
+#    name: demoservice
+#  cloud:
+#    # sentinel:
+#    #   #关闭sentinel懒加载
+#    #   eager: true
+#    #   transport:
+#    #     port: 8723
+#    #     dashboard: 127.0.0.1:8858
+#    nacos:
+#      discovery:
+#        namespace: cd8f4bbc-d1b9-4e40-9bfc-0f8e723cc3c5
+#        server-addr: 192.168.10.116:8844
+#        metadata:
+#          group: DEFAULT_GROUP
+#          version: 1.0
+#          region: dev
+#    loadbalancer:
+#      ribbon:
+#        enabled: false
+#  main:
+#    #一个实体类对应多张表，覆盖
+#    allow-bean-definition-overriding: true
+#  shardingsphere:
+#    datasource:
+#      db1:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        url: jdbc:mysql://192.168.50.212:3306/demosharding_1?characterEncoding=UTF-8&useSSL=false
+#        username: root
+#        password: 123456
+#      db2:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        url: jdbc:mysql://192.168.50.212:3306/demosharding_2?characterEncoding=UTF-8&useSSL=false
+#        username: root
+#        password: 123456
+#        #两个库名
+#      names: db1,db2
+#    props:
+#      sql:
+#        #打开sql输出日志
+#        show: true
+#    sharding:
+#      tables:
+#        pay_order:
+#          # 分库
+#          databasestrategy:
+#            inline:
+#              algorithm-expression: db$->{user_id % 2 + 1}
+#              sharding-column: user_id
+#          actual-data-nodes: db$->{1..2}.pay_order_$->{1..2}
+#          # 指定pay_order表里面主键order_id生成策略 snowflake
+#          # key-generator:
+#          #   type: SNOWFLAKE
+#          #   column: order_id
+#          # 分表
+#          tablestrategy:
+#            inline:
+#              algorithm-expression: pay_order_$->{order_id % 2 + 1}
+#              sharding-column: order_id
+#
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#
+#feign:
+#  client:
+#    config:
+#      #指定服务名
+#      nacos-producer:
+#        loggerLevel: FULL
+#  httpclient:
+#    # 为feign启用 apache httpclient 做请求，而不使用默认的urlconection
+#    enabled: true
+#    # feign 最大连接数
+#    max-connections: 200
+#    # feign 单个路径请求的最大连接数
+#    max-connections-per-route: 50
+#
+## 日志配置
+#logging:
+#  config: http://${spring.cloud.nacos.config.server-addr}/nacos/v1/cs/configs?group=DEFAULT_GROUP&tenant=${spring.cloud.nacos.config.namespace}&dataId=logback-nacos.xml
+#  level:
+#    root: debug
