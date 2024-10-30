@@ -1,0 +1,34 @@
+server:
+  port: 8006
+
+spring:
+  #配置服务名及nacos
+  application:
+    name: userAuthDemo
+  cloud:
+    nacos:
+      discovery:
+        namespace: fbf3bd37-5979-42b5-8b8e-b0aeb60ba988
+        server-addr: 192.168.10.116:8848
+
+feign:
+  client:
+    config:
+      #指定服务名
+      nacos-producer:
+        loggerLevel: FULL
+  httpclient:
+    # 为feign启用 apache httpclient 做请求，而不使用默认的urlconection
+    enabled: true
+    # feign 最大连接数
+    max-connections: 200
+    # feign 单个路径请求的最大连接数
+    max-connections-per-route: 50
+
+twitter:
+  consumerKey: 123456
+  consumerSecret: 123456
+
+facebook:
+  appId: 123456
+  appSecret: 123456
