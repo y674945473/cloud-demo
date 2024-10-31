@@ -22,12 +22,11 @@ public class AuthFilter implements GlobalFilter, Ordered {
 
     private static final String TOKEN_HEADER = "Authorization";
 
-    private static final String REFRESH_TOKEN_HEADER = "RefreshAuthorization";
-
     private static List<String> auth_list = new ArrayList<>();
 
     static {
         auth_list.add("/user/register");
+        auth_list.add("/user/refreshToken");
     }
     @Override
     public int getOrder() {
