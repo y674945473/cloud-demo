@@ -1,6 +1,6 @@
 # docker
 ````
-在本机通过dockerDesktop进行部署即可。
+在本机通过dockerDesktop进行部署即可。（https://www.docker.com/products/docker-desktop/）
 ````
 [Docker Desktop Installer.exe](flies%2FDocker%20Desktop%20Installer.exe)
 
