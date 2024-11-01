@@ -28,10 +28,10 @@ public class UserController {
     }
 
     @PostMapping("/refreshToken")
-    public Result<Object> refreshToken(@RequestBody String refreshToken){
+    public Result<TokenVo> refreshToken(@RequestBody String refreshToken){
         TokenVo vo = new TokenVo();
         if(JwtUtil.isExpired(refreshToken)){
-            return Result.fail("refreshToken已过期，请重新登录");
+            return Result.fail();
         }
         //解密刷新token，然后重新生成token
         Map<String, Object> stringObjectMap = JwtUtil.extractInfo(refreshToken);

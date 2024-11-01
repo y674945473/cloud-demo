@@ -7,12 +7,14 @@ import com.alibaba.fastjson.JSONObject;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import lombok.extern.log4j.Log4j2;
+import org.apache.commons.lang3.StringUtils;
 import org.demo.common.exception.BaseException;
 import org.demo.common.util.SnowflakeUtil;
 import org.demo.pay.contants.IOSPayStatusEnum;
 import org.demo.pay.contants.PayTypeEnum;
 import org.demo.pay.contants.RedisKeyEnum;
-import org.demo.pay.dto.*;
+import org.demo.pay.dto.IosCallbackMqDto;
+import org.demo.pay.dto.PayMqDto;
 import org.demo.pay.entity.*;
 import org.demo.pay.mq.ProduceService;
 import org.demo.pay.qo.IOSCallBackQo;
@@ -27,7 +29,6 @@ import org.demo.pay.vo.IOSStatusVo;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -43,7 +44,6 @@ import java.util.Base64;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
 
 @Log4j2
 @Service
@@ -91,7 +91,7 @@ public class IOSPayServiceImpl implements IOSPayService {
     @Transactional
     public IOSOrderVo createOrder(WechatPayQo wechatPayQo, String userId, String os) {
         PersonalCenterServiceForNewPeople personalCenterServiceForNewPeople = iPersonalCenterServiceForNewPeopleService.getId(wechatPayQo.getGoodsId());
-        if (personalCenterServiceForNewPeople == null || org.springframework.util.StringUtils.isEmpty(personalCenterServiceForNewPeople.getGoodsType())){
+        if (personalCenterServiceForNewPeople == null || StringUtils.isEmpty(personalCenterServiceForNewPeople.getGoodsType())){
             throw new BaseException(501,"商品信息不存在,无法发起支付");
         }
         log.info("IOS支付生成本地订单-参数：{}====用户ID：{}",wechatPayQo,userId);

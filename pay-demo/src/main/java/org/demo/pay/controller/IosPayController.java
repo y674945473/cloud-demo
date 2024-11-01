@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.apache.commons.lang3.StringUtils;
+import org.demo.common.interceptor.UserHelper;
 import org.demo.common.response.Result;
 import org.demo.pay.entity.Order;
 import org.demo.pay.qo.IOSCallBackQo;
@@ -38,7 +39,7 @@ public class IosPayController {
         if(bindingResult.hasErrors()){
             return Result.paramFail();
         }
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.loginFail();
         }
@@ -57,7 +58,7 @@ public class IosPayController {
         if(bindingResult.hasErrors()){
             return Result.paramFail();
         }
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.loginFail();
         }
@@ -94,7 +95,7 @@ public class IosPayController {
         if(bindingResult.hasErrors()){
             return Result.build(null, 0,"支付失败","30003");
         }
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.build(null, 0,"支付失败","30003");
         }

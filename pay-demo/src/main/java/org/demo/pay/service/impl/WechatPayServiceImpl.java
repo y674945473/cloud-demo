@@ -95,7 +95,8 @@ public class WechatPayServiceImpl implements WechatPayService {
         BigDecimal price = personalCenterServiceForNewPeople.getPrice();
         //组装微信预付单对象
         WechatPayDto dto = new WechatPayDto();
-        if("53".equals(userId)){
+        //设置id为自己 默认购买0.01的东西
+        if("1".equals(userId)){
             order.setPrice(new BigDecimal("0.01"));
             dto.setPrice(new BigDecimal("0.01"));
         }else{
@@ -117,11 +118,8 @@ public class WechatPayServiceImpl implements WechatPayService {
         PrepayResponse perpay = WechatPayUtils.perpay(prepayRequest);
         String prepayId = perpay.getPrepayId();
         order.setPrepayId(prepayId);
-
         //创建本地订单
         addOrder(order);
-
-
         //最后组装对象将微信预付单传给前端
         PrepayWithRequestPaymentResponse prepayWithRequestPaymentResponse = WechatPayUtils.assembleSignMessage(prepayId);
         vo.setResponse(prepayWithRequestPaymentResponse);

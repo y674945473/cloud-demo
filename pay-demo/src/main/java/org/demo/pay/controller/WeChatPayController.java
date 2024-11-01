@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.demo.common.interceptor.UserHelper;
 import org.demo.common.response.Result;
 import org.demo.pay.qo.BusinessCallbackQo;
 import org.demo.pay.qo.WechatPayQo;
@@ -37,7 +38,7 @@ public class WeChatPayController {
         if(bindingResult.hasErrors()){
             return Result.paramFail();
         }
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.loginFail();
         }
@@ -82,7 +83,7 @@ public class WeChatPayController {
     @ApiOperation("查询订单状态")
     @GetMapping("/getOrderStatus/{orderNo}")
     public Result<OrderStatusVo> getOrderStatus(@PathVariable(name = "orderNo") String orderNo) {
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.loginFail();
         }
@@ -95,7 +96,7 @@ public class WeChatPayController {
     @ApiOperation("关闭订单")
     @GetMapping("/closeOrder/{orderNo}")
     public Result<Boolean> closeOrder(@PathVariable(name = "orderNo") String orderNo) {
-        String userId = "UserUtil.getCurrentUserId()";
+        String userId = UserHelper.getUserId().toString();
         if(StringUtils.isEmpty(userId)){
             return Result.loginFail();
         }

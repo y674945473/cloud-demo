@@ -15,6 +15,10 @@ import javax.annotation.Resource;
 @Service
 public class ProduceService {
 
+    /**
+     * 支付完成之后直接甩给mq，下游根据mq进行业务操作
+     */
+
     @Resource
     private RocketMQTemplate rocketmqTemplate;
 
