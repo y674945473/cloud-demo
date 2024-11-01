@@ -1,9 +1,9 @@
 package org.demo.pay.util;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.util.StringUtils;
 
 import javax.net.ssl.HttpsURLConnection;
-import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.URL;
 

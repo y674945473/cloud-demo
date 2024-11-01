@@ -12,16 +12,18 @@ import com.wechat.pay.java.service.payments.app.model.PrepayRequest;
 import com.wechat.pay.java.service.payments.app.model.PrepayResponse;
 import com.wechat.pay.java.service.payments.app.model.PrepayWithRequestPaymentResponse;
 import com.wechat.pay.java.service.payments.model.Transaction;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.demo.common.exception.BaseException;
 import org.demo.common.util.SnowflakeUtil;
-import org.demo.pay.bo.UserEquityBo;
 import org.demo.pay.config.WechatPayConfig;
 import org.demo.pay.contants.PayTypeEnum;
 import org.demo.pay.contants.RedisKeyEnum;
 import org.demo.pay.contants.WXCallBackConstants;
 import org.demo.pay.contants.WechatPayStatusEnum;
-import org.demo.pay.dto.*;
+import org.demo.pay.dto.OrderTipsDto;
+import org.demo.pay.dto.PayMqDto;
+import org.demo.pay.dto.WechatPayDto;
 import org.demo.pay.entity.*;
 import org.demo.pay.mq.ProduceService;
 import org.demo.pay.qo.BusinessCallbackQo;
@@ -30,23 +32,18 @@ import org.demo.pay.service.*;
 import org.demo.pay.util.WechatPayUtils;
 import org.demo.pay.vo.OrderStatusVo;
 import org.demo.pay.vo.WechatOrderVo;
-import org.demo.pay.service.IOrderService;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 @Log4j2
 @Service

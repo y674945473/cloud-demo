@@ -25,8 +25,8 @@ public class AuthFilter implements GlobalFilter, Ordered {
     private static List<String> auth_list = new ArrayList<>();
 
     static {
-        auth_list.add("/user/register");
-        auth_list.add("/user/refreshToken");
+        auth_list.add("/userAuthDemo/user/register");
+        auth_list.add("/userAuthDemo/user/refreshToken");
     }
     @Override
     public int getOrder() {
@@ -50,19 +50,19 @@ public class AuthFilter implements GlobalFilter, Ordered {
         }else{
             HttpHeaders headers = request.getHeaders();
             String authorization = headers.getFirst(TOKEN_HEADER);
-            log.info("authorization: {}", authorization);
-            boolean expired = JwtUtil.isExpired(authorization);
-            //如果过期
-            if(!expired){
-                throw new BaseException(501,"token过期");
+            if (authorization == null){
+                throw new BaseException(501,"token为空");
             }
-            Map<String, Object> stringObjectMap = JwtUtil.extractInfo(authorization);
-            if (stringObjectMap != null) {
-                String uid = stringObjectMap.get("uid").toString();
-                //将uid放入到redis中，保证其他服务直接获取
+            log.info("authorization: {}", authorization);
+            // TODO: 这块只是想要做一下校验，不将用户信息传递下去，想通过common的拦截器进行解密处理
+            //jwt解密的时候，过期直接抛出异常ExpiredJwtException
+            Map<String, Object> jwt = JwtUtil.extractInfo(authorization);
+            //如果过期
+            if(null == jwt){
+                throw new BaseException(501,"token过期");
+            }else {
+                String uid = jwt.get("uid").toString();
                 log.info("uid: {}", uid);
-            }else{
-                throw new BaseException(502,"token无效");
             }
         }
         return chain.filter(exchange);

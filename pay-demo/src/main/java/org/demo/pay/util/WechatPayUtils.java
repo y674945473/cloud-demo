@@ -11,12 +11,12 @@ import com.wechat.pay.java.core.util.NonceUtil;
 import com.wechat.pay.java.service.payments.app.AppService;
 import com.wechat.pay.java.service.payments.app.model.*;
 import com.wechat.pay.java.service.payments.model.Transaction;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import org.demo.pay.config.WechatPayConfigProperties;
 import org.demo.pay.dto.WechatPayDto;
 import org.springframework.core.io.ClassPathResource;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.math.BigDecimal;

@@ -63,7 +63,7 @@ public class GatewayAllFilter implements GlobalFilter , Ordered {
         String requestPath = request.getPath().pathWithinApplication().value();
         String clientIp = Objects.requireNonNull(request.getRemoteAddress()).getHostString();
         String scheme = request.getURI().getScheme();
-        String method = request.getMethodValue();
+        String method = request.getMethod().name();
         gatewayLog.setSchema(scheme);
         gatewayLog.setRequestMethod(method);
         gatewayLog.setRequestPath(requestPath);

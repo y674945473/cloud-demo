@@ -60,8 +60,10 @@ public class JwtUtil {
         try {
             claims = Jwts.parser().setSigningKey(signingKey).parseClaimsJws(token).getBody();
             return Optional.of(claims);
-        } catch (ExpiredJwtException | MalformedJwtException | IllegalArgumentException | SignatureException e) {
-            throw new BaseException();
+        } catch (ExpiredJwtException e){
+            return Optional.empty();
+        }catch (MalformedJwtException | IllegalArgumentException | SignatureException e) {
+            throw new BaseException(503,"jwt解密失败");
         }
 
     }

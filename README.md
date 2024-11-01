@@ -1,3 +1,19 @@
+# 随笔
+````
+技术栈：
+spring-cloud-alibaba
+nacos
+gateway
+openfeign
+Hystrix
+skywalking
+shardingsphere_3.x
+xxl-job
+cassandra
+clickhouse
+sentinel
+````
+
 # docker
 ````
 在本机通过dockerDesktop进行部署即可。（https://www.docker.com/products/docker-desktop/）

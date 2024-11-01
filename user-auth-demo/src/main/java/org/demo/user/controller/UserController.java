@@ -1,8 +1,8 @@
 package org.demo.user.controller;
 
+import org.demo.user.qo.UserQo;
 import org.demo.common.response.Result;
 import org.demo.common.util.JwtUtil;
-import org.demo.user.qo.UserQo;
 import org.demo.user.vo.TokenVo;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

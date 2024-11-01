@@ -1,5 +1,6 @@
 package org.demo.common.exception;
 
+
 import lombok.Getter;
 
 @Getter
@@ -25,5 +26,6 @@ public class BaseException extends RuntimeException {
     protected BaseException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+
 }
 

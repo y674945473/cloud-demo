@@ -1,13 +1,13 @@
 package org.demo.pay.service;
 
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.demo.pay.dto.OrderTipsDto;
 import org.demo.pay.qo.BusinessCallbackQo;
 import org.demo.pay.qo.WechatPayQo;
 import org.demo.pay.vo.OrderStatusVo;
 import org.demo.pay.vo.WechatOrderVo;
 
-import javax.servlet.http.HttpServletRequest;
 
 public interface WechatPayService {
 
@@ -49,4 +49,5 @@ public interface WechatPayService {
     Boolean closeOrder(String orderNo);
 
 
+    OrderTipsDto getOrderTips(Integer goodsId, String userId);
 }

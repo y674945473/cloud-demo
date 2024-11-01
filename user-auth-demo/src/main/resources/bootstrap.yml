@@ -8,3 +8,4 @@ spring:
         file-extension: yaml
   application:
     name: userAuthDemo
+
