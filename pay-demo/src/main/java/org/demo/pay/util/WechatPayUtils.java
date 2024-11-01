@@ -125,9 +125,6 @@ public class WechatPayUtils {
      * @param request
      * @return
      * @return PrepayWithRequestPaymentResponse    返回类型
-     * @author xsq
-     * @throws
-     * @date 2023年7月1日 下午3:22:00
      * @version V1.0
      */
     public static PrepayWithRequestPaymentResponse appUnifiedPay(PrepayRequest request) {
@@ -171,9 +168,6 @@ public class WechatPayUtils {
      * @param request
      * @return
      * @return Transaction    返回类型
-     * @author xsq
-     * @throws
-     * @date 2023年7月1日 下午4:53:47
      * @version V1.0
      */
     public static Transaction getAppOrderById(QueryOrderByIdRequest request) {
@@ -186,9 +180,6 @@ public class WechatPayUtils {
      * @Description: 关闭APP订单
      * @param request
      * @return void    返回类型
-     * @author xsq
-     * @throws
-     * @date 2023年7月1日 下午4:54:57
      * @version V1.0
      */
     public static void closeAppOrder(CloseOrderRequest request) {
@@ -202,9 +193,6 @@ public class WechatPayUtils {
      * @param wechatPayDto
      * @return
      * @return PrepayRequest    返回类型
-     * @author xsq
-     * @throws
-     * @date 2023年7月16日 下午6:46:30
      * @version V1.0
      */
     public static PrepayRequest initPrepayRequest(WechatPayDto wechatPayDto, String notifyUrl) {

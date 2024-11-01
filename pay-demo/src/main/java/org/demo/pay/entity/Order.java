@@ -13,8 +13,6 @@ import java.time.LocalDateTime;
  * 订单表
  * </p>
  *
- * @author xsq
- * @since 2023-10-10
  */
 @Getter
 @Setter

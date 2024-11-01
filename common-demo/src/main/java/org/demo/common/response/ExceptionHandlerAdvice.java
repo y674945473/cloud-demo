@@ -15,11 +15,6 @@ import javax.security.auth.login.LoginException;
 * 项目名称：bh_pro_base
 * 类名称：ExceptionHandlerAdvice
 * 类描述：异常处理器增强器
-* 创建人：xsq
-* 创建时间：2023年6月24日 下午5:42:24
-* 修改人：
-* 修改时间：2023年6月24日 下午5:42:24
-* 修改备注：
 * @version V1.0
 *
 */

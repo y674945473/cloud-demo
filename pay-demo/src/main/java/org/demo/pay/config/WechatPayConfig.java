@@ -24,12 +24,7 @@ import java.util.Base64;
 * 项目名称：bh_pro_base
 * 类名称：WechatPayConfig
 * 类描述：
-* 创建人：xsq
-* 创建时间：2023年6月30日 上午8:34:58
-* 修改人：
-* 修改时间：2023年6月30日 上午8:34:58
-* 修改备注：
-* @version V1.0 
+* @version V1.0
 *
 */
 
@@ -86,9 +81,6 @@ public class WechatPayConfig {
     * @Description: APP支付服务初始化 
     * @return    
     * @return AppService    返回类型
-    * @author xsq 
-    * @throws
-    * @date 2023年7月1日 下午3:21:05 
     * @version V1.0
      */
     @Bean

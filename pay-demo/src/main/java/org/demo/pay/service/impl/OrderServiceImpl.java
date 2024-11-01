@@ -27,8 +27,6 @@ import java.util.stream.Collectors;
  * 订单表 服务实现类
  * </p>
  *
- * @author xsq
- * @since 2023-10-10
  */
 @Service
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {

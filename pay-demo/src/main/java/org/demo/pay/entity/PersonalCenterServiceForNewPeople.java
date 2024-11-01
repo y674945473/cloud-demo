@@ -15,8 +15,6 @@ import java.time.LocalDateTime;
  * 个人中心-服务分类表
  * </p>
  *
- * @author xsq
- * @since 2024-01-24
  */
 @Getter
 @Setter

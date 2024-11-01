@@ -8,8 +8,6 @@ import org.demo.pay.entity.WechatCallbackLog;
  *  服务类
  * </p>
  *
- * @author xsq
- * @since 2024-01-25
  */
 public interface IWechatCallbackLogService extends IService<WechatCallbackLog> {
 

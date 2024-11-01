@@ -12,12 +12,7 @@ import java.util.Map;
 * 项目名称：bh_pro_base
 * 类名称：SpringContextHolder
 * 类描述：
-* 创建人：xsq
-* 创建时间：2023年7月1日 下午2:27:06
-* 修改人：
-* 修改时间：2023年7月1日 下午2:27:06
-* 修改备注：
-* @version V1.0 
+* @version V1.0
 *
 */
 @Component

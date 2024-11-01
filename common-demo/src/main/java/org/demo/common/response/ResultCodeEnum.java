@@ -5,12 +5,7 @@ package org.demo.common.response;
 * 项目名称：bh_pro_base
 * 类名称：ReturnCode
 * 类描述：
-* 创建人：xsq
-* 创建时间：2023年6月24日 下午7:02:58
-* 修改人：
-* 修改时间：2023年6月24日 下午7:02:58
-* 修改备注：
-* @version V1.0 
+* @version V1.0
 *
 */
 public enum ResultCodeEnum {

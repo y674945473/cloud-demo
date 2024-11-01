@@ -10,12 +10,7 @@ import java.util.Optional;
 * 项目名称：bh_pro_base
 * 类名称：ResultData
 * 类描述：统一返回数据格式
-* 创建人：xsq
-* 创建时间：2023年6月24日 下午7:02:11
-* 修改人：
-* 修改时间：2023年6月24日 下午7:02:11
-* 修改备注：
-* @version V1.0 
+* @version V1.0
 *
 */
 @Data

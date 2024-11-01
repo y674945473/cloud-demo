@@ -8,8 +8,6 @@ import org.demo.pay.entity.IosVerifyJsonLog;
  *  服务类
  * </p>
  *
- * @author xsq
- * @since 2024-01-29
  */
 public interface IIosVerifyJsonLogService extends IService<IosVerifyJsonLog> {
 

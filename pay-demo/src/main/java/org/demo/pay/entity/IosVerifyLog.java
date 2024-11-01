@@ -12,8 +12,6 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author xsq
- * @since 2024-01-29
  */
 @Getter
 @Setter

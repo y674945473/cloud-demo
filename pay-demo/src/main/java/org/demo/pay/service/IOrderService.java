@@ -13,8 +13,6 @@ import java.time.LocalDateTime;
  * 订单表 服务类
  * </p>
  *
- * @author xsq
- * @since 2023-10-10
  */
 public interface IOrderService extends IService<Order> {
 

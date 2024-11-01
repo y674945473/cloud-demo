@@ -16,11 +16,6 @@ import javax.annotation.Resource;
 * 项目名称：bh_pro_base
 * 类名称：ResultHandlerAdvice
 * 类描述：统一响应体增强处理器
-* 创建人：xsq
-* 创建时间：2023年6月24日 下午6:16:36
-* 修改人：
-* 修改时间：2023年6月24日 下午6:16:36
-* 修改备注：
 * @version V1.0 
 *
 */

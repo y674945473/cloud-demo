@@ -9,12 +9,7 @@ import org.springframework.context.annotation.Configuration;
 * 项目名称：bh_pro_base
 * 类名称：WechatPayConfig
 * 类描述：微信支付配置类
-* 创建人：xsq
-* 创建时间：2023年6月30日 上午8:28:05
-* 修改人：
-* 修改时间：2023年6月30日 上午8:28:05
-* 修改备注：
-* @version V1.0 
+* @version V1.0
 *
 */
 

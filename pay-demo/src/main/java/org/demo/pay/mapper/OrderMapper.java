@@ -8,8 +8,6 @@ import org.demo.pay.entity.Order;
  * 订单表 Mapper 接口
  * </p>
  *
- * @author xsq
- * @since 2023-10-10
  */
 public interface OrderMapper extends BaseMapper<Order> {
 
