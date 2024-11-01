@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca7f99a0-955d-45c1-ab28-fc8fd3a6afc6" name="更改" comment="修改配置" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;y674945473&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/y674945473/cloud-demo.git&quot;,
+    &quot;accountId&quot;: &quot;5a75571c-be4f-4945-a21f-d0ecc597ef15&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2oBVBeMP6VIhBpjTuJ0QfUDFOiE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.nacos-demo [clean].executor": "Run",
+    "Maven.nacos-demo [install].executor": "Run",
+    "Maven.pay-demo [clean].executor": "Run",
+    "Maven.pay-demo [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/github/cloud-demo/common-demo/src/main/java/org/demo/common",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "应用程序.FeignServiceApplication.executor": "Run",
+    "应用程序.GatewayDemoApplication.executor": "Run",
+    "应用程序.Service1DemoApplication.executor": "Run",
+    "应用程序.UserAuthDemoApplication.executor": "Run"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\cloud-demo\common-demo\src\main\java\org\demo\common" />
+      <recent name="D:\github\cloud-demo\service1-demo\src\main\java\org\demo\service1" />
+      <recent name="D:\github\cloud-demo\user-auth-demo\src\main\java\org\demo\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.demo.service1.config" />
+      <recent name="org.demo.gate.util" />
+      <recent name="org.demo.gate.filter" />
+      <recent name="org.demo.user.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.Service1DemoApplication">
+    <configuration name="FeignServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.demo.feign.FeignServiceApplication" />
+      <module name="feign-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.demo.feign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.demo.gate.GatewayDemoApplication" />
+      <module name="gateway-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.demo.gate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Service1DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.demo.service1.Service1DemoApplication" />
+      <module name="service1-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.demo.service1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAuthDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.demo.user.UserAuthDemoApplication" />
+      <module name="user-auth-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.demo.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="cloud-demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="cloud-demo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Service1DemoApplication" />
+        <item itemvalue="应用程序.GatewayDemoApplication" />
+        <item itemvalue="应用程序.UserAuthDemoApplication" />
+        <item itemvalue="应用程序.FeignServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ca7f99a0-955d-45c1-ab28-fc8fd3a6afc6" name="更改" comment="" />
+      <created>1730342821545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730342821545</updated>
+    </task>
+    <task id="LOCAL-00001" summary="增加refreshtoken">
+      <option name="closed" value="true" />
+      <created>1730342903723</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730342903723</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改配置">
+      <option name="closed" value="true" />
+      <created>1730343324833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730343324833</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改配置">
+      <option name="closed" value="true" />
+      <created>1730343536738</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730343536738</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加oauth+jwt验证">
+      <option name="closed" value="true" />
+      <created>1730448569477</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730448569477</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改配置">
+      <option name="closed" value="true" />
+      <created>1730452573396</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730452573396</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加refreshtoken" />
+    <MESSAGE value="增加oauth+jwt验证" />
+    <MESSAGE value="修改配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改配置" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service1-demo/src/main/java/org/demo/service1/interceptor/UserInterceptor.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
